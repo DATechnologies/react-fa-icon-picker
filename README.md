@@ -85,5 +85,5 @@ If you are interested in contributing, please submit a PR.
 
 ### Contributors
 
-- [Cory McAboy](www.github.com/cmcaboy)
+- [Cory McAboy](https://github.com/cmcaboy)
 - [Joseph Hu](https://github.com/zhhjoseph)
