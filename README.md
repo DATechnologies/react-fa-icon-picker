@@ -71,13 +71,13 @@ PickerList
 | searchInputStyles | CSSProperties       | false    | Styles for the search input inside of the picker               |
 
 PickerListItem
-| Prop | Type | required | Description |
+| Prop | Type | Required | Description |
 | ---- | --- | --- | ---
 | icon | string | true | The name of the icon to render. Example: "FaAdobe" |
 | size | number | false |The size of the icon. Default: 24 |
 | color | string | false | The color of the icon. Default: "#000" |
 | onClick | (v: string) => void | false | An onClick handler for the icon. |
-| containerStyles | (v: string) => void | false | An onClick handler for the icon. |
+| containerStyles | CSSProperties | false | An onClick handler for the icon. |
 
 ## Contribution Guide
 
