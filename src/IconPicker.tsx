@@ -84,7 +84,7 @@ const IconPicker: React.SFC<IconPickerProps> = ({
 }
 
 IconPicker.defaultProps = {
-  hideSearch: true,
+  hideSearch: false,
 }
 
 const Container = styled.div`
