@@ -61,8 +61,8 @@ PickerList
 
 | Prop              | Type                | Required | Description                                                    |
 | ----------------- | ------------------- | -------- | -------------------------------------------------------------- |
-| value             | string              | false    | The current font awesome icon displayed on the picker.         |
-| onChange          | (v: string) => void | false    | A change handler that is executed when a new icon is selected. |
+| value             | string              | true     | The current font awesome icon displayed on the picker.         |
+| onChange          | (v: string) => void | true     | A change handler that is executed when a new icon is selected. |
 | hideSearch        | boolean             | false    | If true, the search input is not displayed. Default is false.  |
 | containerStyles   | CSSProperties       | false    | Styles for the picker container                                |
 | buttonStyles      | CSSProperties       | false    | Styles for the picker button                                   |
