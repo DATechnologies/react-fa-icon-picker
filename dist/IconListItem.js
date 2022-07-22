@@ -14,7 +14,7 @@ import * as FontIcon from 'react-icons/fa';
 var IconPickerItem = function (_a) {
     var icon = _a.icon, size = _a.size, color = _a.color, onClick = _a.onClick, containerStyles = _a.containerStyles;
     var iconDiv = !!icon ? React.createElement(FontIcon[icon]) : React.createElement("div", null);
-    return (React.createElement("div", { onClick: function () { return !!onClick && onClick(icon); }, style: __assign({ fontSize: size, color: color, padding: 2 }, containerStyles) }, iconDiv));
+    return (React.createElement("div", { className: "iconpicker-item", onClick: function () { return !!onClick && onClick(icon); }, style: __assign({ fontSize: size, color: color, padding: 2 }, containerStyles) }, iconDiv));
 };
 IconPickerItem.defaultProps = {
     color: '#000',

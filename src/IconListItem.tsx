@@ -20,7 +20,7 @@ const IconPickerItem: React.SFC<IconPickerItemProps> = ({
 }) => {
   const iconDiv = !!icon ? React.createElement(FontIcon[icon]) : <div />
   return (
-    <div
+    <div className={"iconpicker-item"}
       onClick={() => !!onClick && onClick(icon)}
       style={{ fontSize: size, color: color, padding: 2, ...containerStyles }}
     >

@@ -27,9 +27,9 @@ var IconPicker = function (_a) {
     var onChangeSearch = function (event) {
         setSearchString(event.target.value);
     };
-    return (React.createElement(Container, { style: buttonStyles, ref: ref, onClick: function () { return buttonClick(); } },
+    return (React.createElement(Container, { style: buttonStyles, ref: ref, onClick: function () { return buttonClick(); }, className: "iconpicker-container" },
         React.createElement(IconPickerItem, { containerStyles: buttonIconStyles, icon: value }),
-        display && (React.createElement(PickerContainer, { style: containerStyles, onClick: function (e) { return e.stopPropagation(); } },
+        display && (React.createElement(PickerContainer, { className: "iconpicker-pickercontainer", style: containerStyles, onClick: function (e) { return e.stopPropagation(); } },
             !hideSearch && (React.createElement(AppInput, { style: searchInputStyles, onChange: onChangeSearch, value: searchString, placeholder: "Search" })),
             iconList
                 .filter(function (i) {

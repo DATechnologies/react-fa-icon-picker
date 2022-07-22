@@ -46,10 +46,11 @@ const IconPicker: React.SFC<IconPickerProps> = ({
     setSearchString(event.target.value)
   }
   return (
-    <Container style={buttonStyles} ref={ref} onClick={() => buttonClick()}>
-      <IconPickerItem containerStyles={buttonIconStyles} icon={value} />
+    <Container style={buttonStyles} ref={ref} onClick={() => buttonClick()} className={"iconpicker-container"}>
+      <IconPickerItem containerStyles={buttonIconStyles} icon={value}/>
       {display && (
         <PickerContainer
+          className={"iconpicker-pickercontainer"}
           style={containerStyles}
           onClick={(e) => e.stopPropagation()}
         >
