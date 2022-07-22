@@ -43,6 +43,3 @@ typings/
 
 # Yarn Integrity file
 .yarn-integrity
-
-# generate output
-dist
