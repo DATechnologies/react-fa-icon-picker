@@ -1,6 +1,6 @@
 {
   "name": "react-fa-icon-picker",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An icon picker for font-awesome icons",
   "main": "dist/index.js",
   "scripts": {
@@ -10,17 +10,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DATechnologies/react-fa-icon-picker.git"
+    "url": "git+https://github.com/drlalensoftware/react-fa-icon-picker.git"
   },
   "author": "Cory McAboy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DATechnologies/react-fa-icon-picker/issues"
+    "url": "https://github.com/drlalensoftware/react-fa-icon-picker/issues"
   },
-  "homepage": "https://github.com/DATechnologies/react-fa-icon-picker#readme",
+  "homepage": "https://github.com/drlalensoftware/react-fa-icon-picker#readme",
   "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "files": [
     "dist"
