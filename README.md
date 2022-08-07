@@ -19,13 +19,13 @@ I feel like an icon picker is a pretty common requirement so I was surprised to 
 Install via npm
 
 ```cli
-npm install drlalensoftware/react-fa-icon-picker
+npm install drlalensoftware/react-fa-icon-picker-alen
 ```
 
 or yarn
 
 ```cli
-yarn add drlalensoftware/react-fa-icon-picker
+yarn add drlalensoftware/react-fa-icon-picker-alen
 ```
 
 ## Usage

@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/drlalensoftware/react-fa-icon-picker.git"
+    "url": "git+https://github.com/drlalensoftware/react-fa-icon-picker-alen.git"
   },
   "author": "Cory McAboy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/drlalensoftware/react-fa-icon-picker/issues"
+    "url": "https://github.com/drlalensoftware/react-fa-icon-picker-alen/issues"
   },
-  "homepage": "https://github.com/drlalensoftware/react-fa-icon-picker#readme",
+  "homepage": "https://github.com/drlalensoftware/react-fa-icon-picker-alen#readme",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "csstype": "^2.6.10",
-    "react-icons": "^3.10.0",
+    "react-icons": "^4.4.0",
     "styled-components": "^5.1.1"
   }
 }
