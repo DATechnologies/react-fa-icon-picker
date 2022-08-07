@@ -88,11 +88,21 @@ PickerListItem
 | containerStyles | CSSProperties | false | An onClick handler for the icon. |
 | className | string | false | Allow add custom classNames |
 
+## Last updates
+
+v1.0.6
+* Allow adding custom placeholder
+* Allow adding custom className
+* If icon does not exist, appears a question mark instead break
+* Split icon list in 'Branch', 'Solid' and 'Regular'. Allowing hide any of them
+* Update icon list to Font Awesome v5.15.4
+
+v1.0.5
+* Add css class to IconPickerItem and IconPicker
+
+v1.0.4
+* Allow any React versions over 16.13.1, works with React 17 not checked with React 18
+
 ## Contribution Guide
 
 If you are interested in contributing, please submit a PR.
-
-### Contributors
-
-- [Cory McAboy](https://github.com/cmcaboy)
-- [Joseph Hu](https://github.com/zhhjoseph)
