@@ -3,6 +3,7 @@
 ## Overview
 
 react-fa-icon-picker is a strongly typed React icon picker for font-awesome icons.
+
 react-fa-icon-picker-alen is a fork from react-fa-icon-picker to add new updates.
 
 It contains both a picker component and an icon renderer.
