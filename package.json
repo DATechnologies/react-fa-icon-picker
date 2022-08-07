@@ -1,6 +1,6 @@
 {
-  "name": "react-fa-icon-picker",
-  "version": "1.0.5",
+  "name": "react-fa-icon-picker-alen",
+  "version": "1.0.6",
   "description": "An icon picker for font-awesome icons",
   "main": "dist/index.js",
   "scripts": {

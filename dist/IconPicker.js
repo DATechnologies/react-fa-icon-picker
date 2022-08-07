@@ -4,13 +4,14 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
 };
 import * as React from 'react';
 import styled from 'styled-components';
-import { IconPickerItem, iconList } from '.';
+import { IconPickerItem, iconListBranch, iconListRegular, iconListSolid } from '.';
 import { useState, useEffect, useRef } from 'react';
 var IconPicker = function (_a) {
-    var value = _a.value, onChange = _a.onChange, hideSearch = _a.hideSearch, containerStyles = _a.containerStyles, buttonStyles = _a.buttonStyles, buttonIconStyles = _a.buttonIconStyles, pickerIconStyles = _a.pickerIconStyles, searchInputStyles = _a.searchInputStyles;
+    var value = _a.value, onChange = _a.onChange, hideSearch = _a.hideSearch, containerStyles = _a.containerStyles, buttonStyles = _a.buttonStyles, buttonIconStyles = _a.buttonIconStyles, pickerIconStyles = _a.pickerIconStyles, searchInputStyles = _a.searchInputStyles, hideBranchIcons = _a.hideBranchIcons, hideSolidIcons = _a.hideSolidIcons, hideRegularIcons = _a.hideRegularIcons, className = _a.className;
     var ref = useRef(null);
     var _b = useState(false), display = _b[0], changeDisplay = _b[1];
     var _c = useState(''), searchString = _c[0], setSearchString = _c[1];
+    var _d = useState([]), iconList = _d[0], setIconList = _d[1];
     useEffect(function () {
         function handleClickOutside(event) {
             // @ts-ignore
@@ -23,13 +24,26 @@ var IconPicker = function (_a) {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, [ref]);
+    useEffect(function () {
+        var icons = [];
+        if (!hideBranchIcons) {
+            icons = icons.concat(iconListBranch);
+        }
+        if (!hideSolidIcons) {
+            icons = icons.concat(iconListSolid);
+        }
+        if (!hideRegularIcons) {
+            icons = icons.concat(iconListRegular);
+        }
+        setIconList(icons);
+    }, [hideBranchIcons, hideSolidIcons, hideRegularIcons]);
     var buttonClick = function () { return changeDisplay(!display); };
     var onChangeSearch = function (event) {
         setSearchString(event.target.value);
     };
     return (React.createElement(Container, { style: buttonStyles, ref: ref, onClick: function () { return buttonClick(); }, className: "iconpicker-container" },
         React.createElement(IconPickerItem, { containerStyles: buttonIconStyles, icon: value }),
-        display && (React.createElement(PickerContainer, { className: "iconpicker-pickercontainer", style: containerStyles, onClick: function (e) { return e.stopPropagation(); } },
+        display && (React.createElement(PickerContainer, { className: "iconpicker-pickercontainer" + (className ? " " + className : ""), style: containerStyles, onClick: function (e) { return e.stopPropagation(); } },
             !hideSearch && (React.createElement(AppInput, { style: searchInputStyles, onChange: onChangeSearch, value: searchString, placeholder: "Search" })),
             iconList
                 .filter(function (i) {

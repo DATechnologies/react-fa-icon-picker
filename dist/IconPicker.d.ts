@@ -10,6 +10,10 @@ interface IconPickerProps {
     buttonIconStyles?: CSS.Properties;
     pickerIconStyles?: CSS.Properties;
     searchInputStyles?: CSS.Properties;
+    hideBranchIcons?: boolean;
+    hideSolidIcons?: boolean;
+    hideRegularIcons?: boolean;
+    className?: string;
 }
 declare const IconPicker: React.SFC<IconPickerProps>;
 export { IconPicker };

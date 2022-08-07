@@ -7,6 +7,7 @@ interface IconPickerItemProps {
     color?: string;
     onClick?: (icon: string) => void;
     containerStyles?: CSS.Properties;
+    className?: string;
 }
 declare const IconPickerItem: React.SFC<IconPickerItemProps>;
 export { IconPickerItem };
