@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { IconPickerItem, iconList } from '.'
+import { IconPickerItem, iconListBranch, iconListRegular, iconListSolid } from '.'
 import { useState, useEffect, useRef } from 'react'
 import * as CSS from 'csstype'
 import { IconList } from './iconType'
@@ -14,6 +14,9 @@ interface IconPickerProps {
   buttonIconStyles?: CSS.Properties
   pickerIconStyles?: CSS.Properties
   searchInputStyles?: CSS.Properties
+  hideBranchIcons?: boolean
+  hideSolidIcons?: boolean
+  hideRegularIcons?: boolean
 }
 
 const IconPicker: React.SFC<IconPickerProps> = ({
@@ -25,10 +28,14 @@ const IconPicker: React.SFC<IconPickerProps> = ({
   buttonIconStyles,
   pickerIconStyles,
   searchInputStyles,
+  hideBranchIcons,
+  hideSolidIcons,
+  hideRegularIcons
 }) => {
   const ref = useRef(null)
   const [display, changeDisplay] = useState(false)
   const [searchString, setSearchString] = useState('')
+  const [iconList, setIconList] = useState<any[]>([])
   useEffect(() => {
     function handleClickOutside(event: any) {
       // @ts-ignore
@@ -41,6 +48,19 @@ const IconPicker: React.SFC<IconPickerProps> = ({
       document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [ref])
+  useEffect(() => {
+    let icons: any[] = []
+    if(!hideBranchIcons){
+      icons = icons.concat(iconListBranch)
+    }
+    if(!hideSolidIcons){
+      icons = icons.concat(iconListSolid)
+    }
+    if(!hideRegularIcons){
+      icons = icons.concat(iconListRegular)
+    }
+    setIconList(icons)
+  }, [hideBranchIcons, hideSolidIcons, hideRegularIcons])
   const buttonClick = () => changeDisplay(!display)
   const onChangeSearch = (event: any) => {
     setSearchString(event.target.value)

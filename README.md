@@ -72,6 +72,9 @@ PickerList
 | buttonIconStyles  | CSSProperties       | false    | Styles for the picker button icon                              |
 | pickerIconStyles  | CSSProperties       | false    | Styles for the icons inside of the picker                      |
 | searchInputStyles | CSSProperties       | false    | Styles for the search input inside of the picker               |
+| hideBranchIcons   | boolean             | false    | If true, hide the branch icons from list . Default is false.   |
+| hideSolidIcons    | boolean             | false    | If true, hide the solid icons from list . Default is false.    |
+| hideRegularIcons  | boolean             | false    | If true, hide the regular icons from list . Default is false.  |
 
 PickerListItem
 | Prop | Type | Required | Description |
