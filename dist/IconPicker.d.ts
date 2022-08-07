@@ -14,6 +14,7 @@ interface IconPickerProps {
     hideSolidIcons?: boolean;
     hideRegularIcons?: boolean;
     className?: string;
+    placeholder?: string;
 }
 declare const IconPicker: React.SFC<IconPickerProps>;
 export { IconPicker };

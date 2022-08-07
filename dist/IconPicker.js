@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { IconPickerItem, iconListBranch, iconListRegular, iconListSolid } from '.';
 import { useState, useEffect, useRef } from 'react';
 var IconPicker = function (_a) {
-    var value = _a.value, onChange = _a.onChange, hideSearch = _a.hideSearch, containerStyles = _a.containerStyles, buttonStyles = _a.buttonStyles, buttonIconStyles = _a.buttonIconStyles, pickerIconStyles = _a.pickerIconStyles, searchInputStyles = _a.searchInputStyles, hideBranchIcons = _a.hideBranchIcons, hideSolidIcons = _a.hideSolidIcons, hideRegularIcons = _a.hideRegularIcons, className = _a.className;
+    var value = _a.value, onChange = _a.onChange, hideSearch = _a.hideSearch, containerStyles = _a.containerStyles, buttonStyles = _a.buttonStyles, buttonIconStyles = _a.buttonIconStyles, pickerIconStyles = _a.pickerIconStyles, searchInputStyles = _a.searchInputStyles, hideBranchIcons = _a.hideBranchIcons, hideSolidIcons = _a.hideSolidIcons, hideRegularIcons = _a.hideRegularIcons, className = _a.className, placeholder = _a.placeholder;
     var ref = useRef(null);
     var _b = useState(false), display = _b[0], changeDisplay = _b[1];
     var _c = useState(''), searchString = _c[0], setSearchString = _c[1];
@@ -44,7 +44,7 @@ var IconPicker = function (_a) {
     return (React.createElement(Container, { style: buttonStyles, ref: ref, onClick: function () { return buttonClick(); }, className: "iconpicker-container" },
         React.createElement(IconPickerItem, { containerStyles: buttonIconStyles, icon: value }),
         display && (React.createElement(PickerContainer, { className: "iconpicker-pickercontainer" + (className ? " " + className : ""), style: containerStyles, onClick: function (e) { return e.stopPropagation(); } },
-            !hideSearch && (React.createElement(AppInput, { style: searchInputStyles, onChange: onChangeSearch, value: searchString, placeholder: "Search" })),
+            !hideSearch && (React.createElement(AppInput, { style: searchInputStyles, onChange: onChangeSearch, value: searchString, placeholder: placeholder ? placeholder : "Search" })),
             iconList
                 .filter(function (i) {
                 return i.toLowerCase().includes(searchString.toLowerCase());
