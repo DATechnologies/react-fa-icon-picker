@@ -18,6 +18,7 @@ interface IconPickerProps {
   hideSolidIcons?: boolean
   hideRegularIcons?: boolean
   className?: string
+  placeholder?: string
 }
 
 const IconPicker: React.SFC<IconPickerProps> = ({
@@ -32,7 +33,8 @@ const IconPicker: React.SFC<IconPickerProps> = ({
   hideBranchIcons,
   hideSolidIcons,
   hideRegularIcons,
-  className
+  className,
+  placeholder
 }) => {
   const ref = useRef(null)
   const [display, changeDisplay] = useState(false)
@@ -81,7 +83,7 @@ const IconPicker: React.SFC<IconPickerProps> = ({
               style={searchInputStyles}
               onChange={onChangeSearch}
               value={searchString}
-              placeholder="Search"
+              placeholder={placeholder?placeholder:"Search"}
             />
           )}
           {iconList

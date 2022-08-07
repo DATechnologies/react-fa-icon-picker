@@ -37,7 +37,7 @@ The IconPicker component is just like any other picker component. The value prop
 
 ```react
 import * as React from 'react'
-import { IconPicker } from 'react-fa-icon-picker'
+import { IconPicker } from 'react-fa-icon-picker-alen'
 
 export default () => {
   const [value, setValue] = useState("")
@@ -51,7 +51,7 @@ You can also use the IconPickerItem component to render the icon. This uses reac
 
 ```react
 import * as React from 'react'
-import { IconPickerItem } from 'react-fa-icon-picker'
+import { IconPickerItem } from 'react-fa-icon-picker-alen'
 
 export default () => (
   <IconPickerItem icon="FaAdobe" size={24} color="#000" onClick={onClick} />
@@ -75,7 +75,8 @@ PickerList
 | hideBranchIcons   | boolean             | false    | If true, hide the branch icons from list . Default is false.   |
 | hideSolidIcons    | boolean             | false    | If true, hide the solid icons from list . Default is false.    |
 | hideRegularIcons  | boolean             | false    | If true, hide the regular icons from list . Default is false.  |
-| className         | string              | false    | Allow add custom classNames to IconPicker and IconPickerItem   |
+| className         | string              | false    | Allow add custom classNames                                    |
+| placeholder       | string              | false    | Allow add custom placeholder text                              |
 
 PickerListItem
 | Prop | Type | Required | Description |
@@ -85,6 +86,7 @@ PickerListItem
 | color | string | false | The color of the icon. Default: "#000" |
 | onClick | (v: string) => void | false | An onClick handler for the icon. |
 | containerStyles | CSSProperties | false | An onClick handler for the icon. |
+| className | string | false | Allow add custom classNames |
 
 ## Contribution Guide
 
