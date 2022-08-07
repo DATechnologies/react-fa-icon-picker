@@ -17,6 +17,7 @@ interface IconPickerProps {
   hideBranchIcons?: boolean
   hideSolidIcons?: boolean
   hideRegularIcons?: boolean
+  className?: string
 }
 
 const IconPicker: React.SFC<IconPickerProps> = ({
@@ -30,7 +31,8 @@ const IconPicker: React.SFC<IconPickerProps> = ({
   searchInputStyles,
   hideBranchIcons,
   hideSolidIcons,
-  hideRegularIcons
+  hideRegularIcons,
+  className
 }) => {
   const ref = useRef(null)
   const [display, changeDisplay] = useState(false)
@@ -70,7 +72,7 @@ const IconPicker: React.SFC<IconPickerProps> = ({
       <IconPickerItem containerStyles={buttonIconStyles} icon={value}/>
       {display && (
         <PickerContainer
-          className={"iconpicker-pickercontainer"}
+          className={"iconpicker-pickercontainer" +  (className?" " + className:"")}
           style={containerStyles}
           onClick={(e) => e.stopPropagation()}
         >
