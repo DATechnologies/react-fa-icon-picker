@@ -40,5 +40,13 @@
     "csstype": "^2.6.10",
     "react-icons": "^4.4.0",
     "styled-components": "^5.1.1"
-  }
+  },
+  "keywords": [
+    "fontawesome",
+    "icon",
+    "iconpicker",
+    "react",
+    "reactjs",
+    "picker"
+  ]
 }
