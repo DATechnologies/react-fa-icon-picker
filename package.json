@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "csstype": "^2.6.10",
-    "react-icons": "^3.10.0",
+    "react-icons": "^4.7.1",
     "styled-components": "^5.1.1"
   }
 }
