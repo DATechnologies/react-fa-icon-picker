@@ -14,6 +14,7 @@ interface IconPickerProps {
   buttonIconStyles?: CSS.Properties
   pickerIconStyles?: CSS.Properties
   searchInputStyles?: CSS.Properties
+  disabled?: boolean
 }
 
 const IconPicker: React.SFC<IconPickerProps> = ({
@@ -25,6 +26,7 @@ const IconPicker: React.SFC<IconPickerProps> = ({
   buttonIconStyles,
   pickerIconStyles,
   searchInputStyles,
+  disabled
 }) => {
   const ref = useRef(null)
   const [display, changeDisplay] = useState(false)
@@ -47,8 +49,8 @@ const IconPicker: React.SFC<IconPickerProps> = ({
   }
   return (
     <Container style={buttonStyles} ref={ref} onClick={() => buttonClick()}>
-      <IconPickerItem containerStyles={buttonIconStyles} icon={value} />
-      {display && (
+      <IconPickerItem containerStyles={buttonIconStyles} icon={value} disabled={disabled} />
+      {disabled && display && (
         <PickerContainer
           style={containerStyles}
           onClick={(e) => e.stopPropagation()}
