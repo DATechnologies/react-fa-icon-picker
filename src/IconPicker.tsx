@@ -9,6 +9,7 @@ interface IconPickerProps {
   value: IconList
   onChange: (value: IconList) => void
   hideSearch?: boolean
+  placeholder?: string
   containerStyles?: CSS.Properties
   buttonStyles?: CSS.Properties
   buttonIconStyles?: CSS.Properties
@@ -25,6 +26,7 @@ const IconPicker: React.SFC<IconPickerProps> = ({
   buttonIconStyles,
   pickerIconStyles,
   searchInputStyles,
+  placeholder = 'Search'
 }) => {
   const ref = useRef(null)
   const [display, changeDisplay] = useState(false)
@@ -58,7 +60,7 @@ const IconPicker: React.SFC<IconPickerProps> = ({
               style={searchInputStyles}
               onChange={onChangeSearch}
               value={searchString}
-              placeholder="Search"
+              placeholder={placeholder}
             />
           )}
           {iconList
