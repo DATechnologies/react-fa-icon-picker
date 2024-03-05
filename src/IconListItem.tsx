@@ -9,6 +9,7 @@ interface IconPickerItemProps {
   color?: string
   onClick?: (icon: string) => void
   containerStyles?: CSS.Properties
+  disabled: boolean
 }
 
 const IconPickerItem: React.SFC<IconPickerItemProps> = ({
@@ -16,13 +17,14 @@ const IconPickerItem: React.SFC<IconPickerItemProps> = ({
   size,
   color,
   onClick,
+  disabled,
   containerStyles,
 }) => {
   const iconDiv = !!icon ? React.createElement(FontIcon[icon]) : <div />
   return (
     <div
       onClick={() => !!onClick && onClick(icon)}
-      style={{ fontSize: size, color: color, padding: 2, ...containerStyles }}
+      style={{ fontSize: size, color: color, padding: 2, backgroundColor: disabled ? 'lightgray' : null, ...containerStyles }}
     >
       {iconDiv}
     </div>
