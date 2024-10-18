@@ -11,14 +11,14 @@ interface IconPickerItemProps {
   containerStyles?: CSS.Properties
 }
 
-const IconPickerItem: React.SFC<IconPickerItemProps> = ({
+const IconPickerItem: React.FC<IconPickerItemProps> = ({
   icon,
   size,
   color,
   onClick,
   containerStyles,
 }) => {
-  const iconDiv = !!icon ? React.createElement(FontIcon[icon]) : <div />
+  const iconDiv = !!icon ? React.createElement((FontIcon as any)[icon] ) : <div />
   return (
     <div
       onClick={() => !!onClick && onClick(icon)}

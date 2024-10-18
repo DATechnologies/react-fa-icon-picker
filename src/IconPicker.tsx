@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 import styled from 'styled-components'
 import { IconPickerItem, iconList } from '.'
 import { useState, useEffect, useRef } from 'react'
@@ -16,7 +16,7 @@ interface IconPickerProps {
   searchInputStyles?: CSS.Properties
 }
 
-const IconPicker: React.SFC<IconPickerProps> = ({
+const IconPicker: React.FC<IconPickerProps> = ({
   value,
   onChange,
   hideSearch,
@@ -51,7 +51,7 @@ const IconPicker: React.SFC<IconPickerProps> = ({
       {display && (
         <PickerContainer
           style={containerStyles}
-          onClick={(e) => e.stopPropagation()}
+          onClick={(e : Event) => e.stopPropagation()}
         >
           {!hideSearch && (
             <AppInput
